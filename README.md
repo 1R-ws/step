@@ -33,5 +33,22 @@ https://gazebosim.org/docs/harmonic/install_ubuntu/
 
 # step 4
 
+install colcon
+
+sudo apt install colcon
+
+
+# step 5
+
 create ws
+
+//
+mkdir ros2_ws
+cd ros2_ws/
+mkdir src
+irfan@tuf:~/ros2_ws$ colcon build --symlink-install
+
+
+
+
 
