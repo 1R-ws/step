@@ -48,6 +48,19 @@ cd ros2_ws/
 mkdir src
 irfan@tuf:~/ros2_ws$ colcon build --symlink-install
 
+# step 6
+
+shell startup
+
+echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+
+or
+
+sudo apt install gedit
+gedit ~/.bashrc
+source /opt/ros/jazzy/setup.bash
+
+
 
 
 
