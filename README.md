@@ -60,6 +60,17 @@ sudo apt install gedit
 gedit ~/.bashrc
 source /opt/ros/jazzy/setup.bash
 
+# step 7
+
+install depandency
+
+sudo apt install ros-jazzy-twist-stamper
+sudo apt install ros-jazzy-twist-mux
+sudo apt install ros-jazzy-controller-manager
+
+
+
+
 
 
 
