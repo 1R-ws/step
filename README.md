@@ -67,7 +67,7 @@ install depandency
 sudo apt install ros-jazzy-twist-stamper
 sudo apt install ros-jazzy-twist-mux
 sudo apt install ros-jazzy-controller-manager
-
+sudo apt install ros-jazzy-gz-ros2-control
 
 
 
