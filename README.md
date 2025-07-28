@@ -1,16 +1,19 @@
-# step 1
+# ROS 2 Jazzy Setup Guide
 
-##install ros2 jazzy
+This guide provides step-by-step instructions for setting up ROS 2 Jazzy, Visual Studio Code, Gazebo Harmonic, and other essential tools on Ubuntu.
 
-follow this
+---
 
+## Step 1: Install ROS 2 Jazzy
+
+Follow the official installation guide:  
 https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
+---
 
-# step 2
+## Step 2: Install Visual Studio Code (VS Code)
 
-##install visual studio
-
+```bash
 sudo apt update
 sudo apt install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -19,60 +22,75 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microso
 https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt update
 sudo apt install code
+```
 
+You can launch VS Code using:
 
-u can call VS using "code"
+```bash
+code
+```
 
+---
 
-# step 3
+## Step 3: Install Gazebo Harmonic
 
-##install gazebo harmonic
-
-follow this
+Follow the official installation instructions:  
 https://gazebosim.org/docs/harmonic/install_ubuntu/
 
-# step 4
+---
 
-install colcon
+## Step 4: Install Colcon
 
+```bash
 sudo apt install colcon
+```
 
+---
 
-# step 5
+## Step 5: Create a ROS 2 Workspace
 
-create ws
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+colcon build --symlink-install
+```
 
-//
-mkdir ros2_ws
-cd ros2_ws/
-mkdir src
-irfan@tuf:~/ros2_ws$ colcon build --symlink-install
+---
 
-# step 6
+## Step 6: Setup ROS Environment
 
-shell startup
+Automatically source ROS 2 in every terminal:
 
+```bash
 echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+```
 
-or
+Or edit `.bashrc` manually:
 
+```bash
 sudo apt install gedit
 gedit ~/.bashrc
+```
+
+Then add this line at the end of the file:
+
+```bash
 source /opt/ros/jazzy/setup.bash
+```
 
-# step 7
+After editing, apply the changes:
 
-install depandency
+```bash
+source ~/.bashrc
+```
 
+---
+
+## Step 7: Install ROS 2 Dependencies
+
+```bash
 sudo apt install ros-jazzy-twist-stamper
 sudo apt install ros-jazzy-twist-mux
 sudo apt install ros-jazzy-controller-manager
 sudo apt install ros-jazzy-gz-ros2-control
-
-
-
-
-
-
-
-
+```
