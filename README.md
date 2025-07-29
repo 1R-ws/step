@@ -93,4 +93,20 @@ sudo apt install ros-jazzy-twist-stamper
 sudo apt install ros-jazzy-twist-mux
 sudo apt install ros-jazzy-controller-manager
 sudo apt install ros-jazzy-gz-ros2-control
+sudo apt install \
+  ros-jazzy-gz-ros2-control \
+  ros-jazzy-ros2-control \
+  ros-jazzy-controller-manager \
+  ros-jazzy-diff-drive-controller \
+  ros-jazzy-joint-state-broadcaster \
+  ros-jazzy-robot-state-publisher \
+  ros-jazzy-xacro \
+  ros-jazzy-twist-mux \
+  ros-jazzy-teleop-twist-keyboard \
+  ros-jazzy-nav2-bringup \
+  ros-jazzy-slam-toolbox \
+  ros-jazzy-rviz2 \
+  ros-jazzy-joint-state-publisher-gui \
+  python3-colcon-common-extensions
+
 ```
