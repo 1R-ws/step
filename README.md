@@ -89,6 +89,7 @@ source ~/.bashrc
 ## Step 7: Install ROS 2 Dependencies
 
 ```bash
+sudo apt install git ros-dev-tools -y
 sudo apt install ros-jazzy-twist-stamper
 sudo apt install ros-jazzy-twist-mux
 sudo apt install ros-jazzy-controller-manager
