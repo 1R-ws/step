@@ -108,6 +108,8 @@ sudo apt install \
   ros-jazzy-slam-toolbox \
   ros-jazzy-rviz2 \
   ros-jazzy-joint-state-publisher-gui \
-  python3-colcon-common-extensions
+  python3-colcon-common-extensions \
+  ros-jazzy-navigation2 \
+  ros-jazzy-turtlebot3*
 
 ```
