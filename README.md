@@ -13,7 +13,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 ## Step 2: Install Visual Studio Code (VS Code)
 
-Just install at App Center 
+You can install Visual Studio Code via the Ubuntu Software (App Center)
 
 You can launch VS Code using:
 
@@ -33,7 +33,8 @@ https://gazebosim.org/docs/harmonic/install_ubuntu/
 ## Step 4: Install Colcon
 
 ```bash
-sudo apt install colcon
+sudo apt install python3-colcon-common-extensions -y
+
 ```
 
 ---
@@ -50,26 +51,26 @@ colcon build --symlink-install
 
 ## Step 6: Setup ROS Environment
 
-Automatically source ROS 2 in every terminal:
+Option A: Automatically source ROS 2 in every terminal:
 
 ```bash
 echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 ```
 
-Or edit `.bashrc` manually:
+Option B: Edit .bashrc manually:
 
 ```bash
 sudo apt install gedit
 gedit ~/.bashrc
 ```
 
-Then add this line at the end of the file:
+Add at the end of the file:
 
 ```bash
 source /opt/ros/jazzy/setup.bash
 ```
 
-After editing, apply the changes:
+Apply the changes:
 
 ```bash
 source ~/.bashrc
@@ -81,8 +82,6 @@ source ~/.bashrc
 
 ```bash
 sudo apt install git ros-dev-tools -y
-sudo apt install ros-jazzy-twist-stamper
-sudo apt install ros-jazzy-gz-ros2-control
 sudo apt install \
   ros-jazzy-gz-ros2-control \
   ros-jazzy-ros2-control \
@@ -92,6 +91,7 @@ sudo apt install \
   ros-jazzy-robot-state-publisher \
   ros-jazzy-xacro \
   ros-jazzy-twist-mux \
+  ros-jazzy-twist-stamper \
   ros-jazzy-teleop-twist-keyboard \
   ros-jazzy-nav2-bringup \
   ros-jazzy-slam-toolbox \
