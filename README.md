@@ -13,16 +13,7 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 ## Step 2: Install Visual Studio Code (VS Code)
 
-```bash
-sudo apt update
-sudo apt install wget gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
-https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt update
-sudo apt install code
-```
+Just install at App Center 
 
 You can launch VS Code using:
 
@@ -91,8 +82,6 @@ source ~/.bashrc
 ```bash
 sudo apt install git ros-dev-tools -y
 sudo apt install ros-jazzy-twist-stamper
-sudo apt install ros-jazzy-twist-mux
-sudo apt install ros-jazzy-controller-manager
 sudo apt install ros-jazzy-gz-ros2-control
 sudo apt install \
   ros-jazzy-gz-ros2-control \
@@ -113,3 +102,46 @@ sudo apt install \
   ros-jazzy-turtlebot3*
 
 ```
+
+---
+
+## Step 8: Hokuyo LiDAR Setup
+
+Clone the ROS 2 driver for Hokuyo LiDAR:
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/Hokuyo-aut/urg_node2.git
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
+```
+
+Run the LiDAR node:
+
+```bash
+ros2 run urg_node2 urg_node2
+```
+
+
+## 🔧 Setting Permissions for /dev/ttyACM0
+
+If you get a permission error:
+
+```bash
+# Check current permissions
+ls -l /dev/ttyACM0
+
+# Add your user to the dialout group
+sudo usermod -aG dialout $USER
+
+# Reboot your system
+```
+
+If it still does not work, apply temporary permissions:
+
+```bash
+sudo chmod 666 /dev/ttyACM0
+
+```
+
