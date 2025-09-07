@@ -98,7 +98,10 @@ sudo apt install \
   ros-jazzy-rviz2 \
   ros-jazzy-joint-state-publisher-gui \
   ros-jazzy-navigation2 \
-  ros-jazzy-turtlebot3*
+  ros-jazzy-turtlebot3* 
+sudo rosdep init
+rosdep update
+
 
 ```
 
