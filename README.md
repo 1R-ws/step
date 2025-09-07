@@ -122,7 +122,8 @@ source install/setup.bash
 Run the LiDAR node:
 
 ```bash
-ros2 run urg_node2 urg_node2
+ros2 launch urg_node2 urg_node2.launch.py
+
 ```
 
 
