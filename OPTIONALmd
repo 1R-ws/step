@@ -3,3 +3,19 @@ controler
 sudo apt install git ros-dev-tools -y
 
 sudo apt install ros-jazzy-joy-tester
+
+cd ~/ros2_ws/src/protobot
+git status
+git add .
+git commit -m "describe what you changed"
+git config --global user.name "Ammar Irfan"
+git config --global user.email "ammar.irf4n@gmail.com"
+git push origin main
+
+irfan@TUF:~/ros2_ws/src/protobot$ git push origin main
+Username for 'https://github.com': 1R-ws
+Password for 'https://1R-ws@github.com': 
+irfan@TUF:~/ros2_ws/src/protobot$ git config --global credential.helper store
+
+
+https://github.com/settings/tokens/new
