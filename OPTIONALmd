@@ -1,3 +1,5 @@
 controler
 
 sudo apt install git ros-dev-tools -y
+
+sudo apt install ros-jazzy-joy-tester
