@@ -82,6 +82,7 @@ source ~/.bashrc
 
 ```bash
 sudo apt install git ros-dev-tools -y
+sudo apt install libserial-dev -y
 sudo apt install \
   ros-jazzy-gz-ros2-control \
   ros-jazzy-ros2-control \
