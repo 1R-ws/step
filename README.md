@@ -114,7 +114,7 @@ Clone the ROS 2 driver for Hokuyo LiDAR:
 
 ```bash
 cd ~/ros2_ws/src
-git clone --recursive https://github.com/Hokuyo-aut/urg_node2.git
+git clone --recursive https://github.com/1R-ws/urg_node2
 rosdep update
 rosdep install -i --from-paths urg_node2
 
