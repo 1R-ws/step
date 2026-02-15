@@ -1,3 +1,4 @@
+
 # ROS 2 Jazzy Setup Guide
 
 This guide provides step-by-step instructions for setting up ROS 2 Jazzy, Visual Studio Code, Gazebo Harmonic, and other essential tools on Ubuntu.
@@ -6,8 +7,8 @@ This guide provides step-by-step instructions for setting up ROS 2 Jazzy, Visual
 
 ## Step 1: Install ROS 2 Jazzy
 
-Follow the official installation guide:  
-https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
+Follow the official installation guide:
+[https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 
 ---
 
@@ -40,8 +41,8 @@ code
 
 ## Step 3: Install Gazebo Harmonic
 
-Follow the official installation instructions:  
-https://gazebosim.org/docs/harmonic/install_ubuntu/
+Follow the official installation instructions:
+[https://gazebosim.org/docs/harmonic/install_ubuntu/](https://gazebosim.org/docs/harmonic/install_ubuntu/)
 
 ---
 
@@ -49,7 +50,6 @@ https://gazebosim.org/docs/harmonic/install_ubuntu/
 
 ```bash
 sudo apt install python3-colcon-common-extensions -y
-
 ```
 
 ---
@@ -117,8 +117,6 @@ sudo apt install \
   ros-jazzy-turtlebot3* 
 sudo rosdep init
 rosdep update
-
-
 ```
 
 ---
@@ -142,11 +140,33 @@ Run the LiDAR node:
 
 ```bash
 ros2 launch urg_node2 urg_node2.launch.py
-
 ```
 
+---
 
-## 🔧 Setting Permissions for /dev/ttyACM0
+## Step 9: Clone Protobot Packages
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/1R-ws/diffdrive_arduino
+git clone https://github.com/1R-ws/twist_stamper
+git clone https://github.com/1R-ws/serial
+git clone https://github.com/1R-ws/protobot
+```
+
+Build the workspace and source:
+
+```bash
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
+```
+
+**Note:** Check the [Protobot repository](https://github.com/1R-ws/protobot) to see instructions on how to run the robot.
+
+---
+
+## Step 10: Setting Permissions for /dev/ttyACM0
 
 If you get a permission error:
 
@@ -164,6 +184,6 @@ If it still does not work, apply temporary permissions:
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
-
 ```
+
 
