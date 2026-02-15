@@ -13,6 +13,21 @@ https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 ## Step 2: Install Visual Studio Code (VS Code)
 
+for raspberry pi
+
+```bash
+sudo apt update
+sudo apt install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
+https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code
+```
+
+for ubuntu
+
 You can install Visual Studio Code via the Ubuntu Software (App Center)
 
 You can launch VS Code using:
