@@ -186,4 +186,13 @@ If it still does not work, apply temporary permissions:
 sudo chmod 666 /dev/ttyACM0
 ```
 
+---
 
+## Step 11: ESP32 Arduino Bridge
+
+The ESP32 coding for the robot is available here:
+[https://github.com/1R-ws/ros_arduino_bridge_esp32/tree/main/ROSArduinoBridge](https://github.com/1R-ws/ros_arduino_bridge_esp32/tree/main/ROSArduinoBridge)
+
+This repository contains the Arduino sketch and ROS 2 bridge code for ESP32 communication with the robot.
+
+---
